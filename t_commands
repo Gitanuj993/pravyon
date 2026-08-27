@@ -1,0 +1,9 @@
+python "app.py" "pdf\FlashReport_April2026SIH.pdf" --month 2026-04 --out table6_2026_04.csv
+
+python "app.py" "pdf\FlashReport_May2026 (1)SIH.pdf" --month 2026-05 --out table6_2026_05.csv
+
+
+python "app.py" "pdf\FlashReport_June_2026 (1)SIH.pdf" --month 2026-06 --out table6_2026_06.csv
+
+
+python "app.py" "pdf\FlashReport_July_2026SIH.pdf" --month 2026-07 --out table6_2026_07.csv
