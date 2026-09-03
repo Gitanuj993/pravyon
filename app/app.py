@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
-import pandas as pd
-import joblib
+import requests
 
 app = Flask(__name__)
 print("Server is running")
@@ -17,10 +16,11 @@ def predict():
     url = "https://model-service-dev-6h80.onrender.com/predict"
 
     response = requests.post(url, json=project)
-    print(response.status_code)
+    
+    print("ML Service Status:", response.status_code)
 
     
-    return jsonify({response})
+    return jsonify(response.json(), response.status_code)
 
 
 if __name__ == "__main__":
