@@ -20,16 +20,16 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: gitanuj993
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Docker image
         run: |
           docker build \
-            -t ghcr.io/${{ github.repository_owner }}/praviyon-backend:latest .
+            -t ghcr.io/gitanuj993/praviyon-backend:latest .
 
       - name: Push Docker image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/praviyon-backend:latest
+          docker push ghcr.io/gitanuj993/praviyon-backend:latest
 
           
