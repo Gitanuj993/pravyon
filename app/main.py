@@ -12,7 +12,7 @@ app = FastAPI(
 
 print("Server is running")
 app.include_router(project_router)
-
+app.include_router(prediction_router)
 
 @app.get("/")
 def root():
